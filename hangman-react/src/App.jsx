@@ -1,20 +1,17 @@
-import { NavLink, Route, Routes } from "react-router-dom";
-import { Home } from "./Components/Home";
-import { PlayGame } from "./Components/PlayGame";
+import { Route, Routes } from 'react-router-dom'
+import StartGame from './pages/StartGame'
+import PlayGame from './pages/PlayGame'
+import Home from './pages/Home'
 
 function App() {
-  return (
-    <>
-      <nav>
-        <NavLink to="/"></NavLink>
-      </nav>
 
+  return (
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/playgame" element={<PlayGame />} />
+        <Route path='/start' element={<StartGame />} />
+        <Route path='/play' element={<PlayGame />} />
+        <Route path='/' element={<Home />} />
       </Routes>
-    </>
-  );
+  )
 }
 
-export default App;
+export default App
